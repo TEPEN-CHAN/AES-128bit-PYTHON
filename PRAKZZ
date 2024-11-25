@@ -1,0 +1,36 @@
+while True:
+    # Input dari pengguna
+    text = input("Input Text (atau ketik 'exit' untuk keluar): ")
+
+    # Memeriksa apakah pengguna ingin keluar
+    if text.lower() == 'exit':
+        print("Keluar dari program.")
+        break
+
+    # Memisahkan input menjadi kata-kata
+    words = text.split()
+
+    # Memastikan ada setidaknya tiga kata
+    if len(words) < 3:
+        print("Mohon masukkan setidaknya tiga kata.")
+        continue
+
+    # Mengambil kata pertama, kedua, dan ketiga
+    first_word = words[0]
+    second_word = words[1]
+    third_word = words[2]
+
+    # Menampilkan kata pertama secara menurun
+    print("\nKata Pertama (menurun):")
+    for i in range(len(first_word), 0, -1):
+        print(first_word[:i])
+
+    # Menampilkan kata kedua secara menurun
+    print("\nKata Kedua (menurun):")
+    for i in range(len(second_word), 0, -1):
+        print(second_word[:i])
+
+    # Menampilkan kata ketiga secara menurun
+    print("\nKata Ketiga (menurun):")
+    for i in range(len(third_word), 0, -1):
+        print(third_word[:i])
